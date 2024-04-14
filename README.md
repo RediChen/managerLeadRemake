@@ -5,4 +5,4 @@
 [經理人活動 - 帶人的技術](https://edm.managertoday.com.tw/lead/)
 
 ## 成品網頁
-(empty)
+[練習的進度](https://redichen.github.io/managerLeadRemake/)

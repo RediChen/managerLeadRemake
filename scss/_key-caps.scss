@@ -1,0 +1,30 @@
+@import 'mixin';
+
+.key-caps {
+    padding: 4rem 0;
+    background-color: #4f4f51;
+    text-align: center;
+    color: #fff;
+
+    h2 {
+        font-size: 2rem;
+        margin-bottom: 2rem;
+    }
+
+    .key-caps-box {
+        @include center;
+        justify-content: center;
+    }
+
+    .key-caps-cards {
+        margin: 0 2.5rem;
+
+        img {
+            width: 200px;
+        }
+        h3 {
+            font-size: 1.375rem;
+            line-height: 3rem;
+        }
+    }
+}

@@ -1,0 +1,26 @@
+$ivory: #efefef;
+$gray: #7b7b7b;
+$black: #232323;
+$green: #26a32f;
+$orange: #ea5f36;
+$gold: #fff109;
+
+@mixin center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.section-header {
+    margin: 2rem 0;
+    color: #3f4145;
+
+    h2 {
+        font-size: 2.25rem;
+    }
+
+    h3 {
+        font-size: 1.5rem;
+        font-weight: 500;
+    }
+}

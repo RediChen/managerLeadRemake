@@ -1,0 +1,83 @@
+@import 'mixin';
+
+.lesson-info {
+
+    &,
+    &>.section-header {
+        background-color: #000;
+        color: #fff;
+    }
+
+    padding: 1rem;
+}
+
+.lesson-info-box {
+    margin: 0 auto;
+    width: 1110px;
+
+    &>p {
+        font-size: 1.5rem;
+        font-weight: 500;
+        font-family: Oswald, 'Noto Sans TC', serif;
+    }
+}
+
+.lesson-price-box {
+    @include center;
+    width: 1110px;
+    justify-content: space-between;
+}
+
+.lesson-price-cards {
+    padding: 1rem 0;
+    width: 23%;
+    @include center;
+    flex-flow: column;
+    background-color: $green;
+    border-radius: 5px;
+
+    &:first-child {
+        background-color: $orange;
+    }
+
+    strong {
+        font-family: Oswald, 'Noto Sans TC', serif;
+        font-size: 2.125rem;
+        font-weight: 500;
+    }
+}
+
+.lesson-price-ps {
+    margin: 2rem 0;
+    padding: 2rem;
+    background-color: $gray;
+    border: 1px solid #fff;
+    letter-spacing: 1px;
+    line-height: 2rem;
+}
+
+.lesson-btn-box {
+    margin: 3rem auto 0;
+    @include center;
+
+    & > a {
+        display: block;
+        padding: 0.8rem 3.5rem;
+        background-color: $gold;
+        border-radius: 99rem;
+        font-weight: 800; //彌補視覺差
+        font-size: 1.25rem;
+
+        &,
+        &:visited {
+            text-decoration: none;
+            color: black;
+        }
+
+        &:hover,
+        &:active {
+            background-color: #25D0FF;
+            color: #fff;
+        }
+    }
+}

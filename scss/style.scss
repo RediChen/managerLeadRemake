@@ -15,6 +15,7 @@ body {
     font-family: 'Noto Sans TC', 'Roboto', "微軟正黑體", sans-serif;
     //原網站的字型設定，前兩者皆為 Google Font 資源所有。
     color: $black;
+    position: relative;
 }
 
 nav {
@@ -51,7 +52,7 @@ nav {
     }
 
     //立即報名
-    li:nth-last-child(2) >a {
+    li:nth-last-child(2)>a {
         display: block;
         padding: 0.25rem 1rem;
         background-color: $gold;
@@ -72,6 +73,29 @@ nav {
     }
 }
 
+.to-the-top {
+    width: 55px;
+    height: 55px;
+    border-radius: 50%;
+    background-color: $green;
+
+    position: sticky;
+    // position: absolute;
+    top: 90vh;
+    left: calc(100vw - 65px);
+    cursor: pointer;
+
+    .arrow {
+        margin: 0 auto;
+        $unit: 15px;
+        width: 2*$unit;
+        height: 2*$unit;
+        border-style: solid;
+        border-width: $unit;
+        border-color: transparent transparent #fff transparent;
+    }
+}
+
 header {
     display: flex;
     align-items: center;
@@ -79,5 +103,52 @@ header {
 
     img {
         width: 1110px;
+    }
+}
+
+.empty {
+    background-color: rgba($ivory, 0.5);
+    margin: 3rem 0;
+    height: 30vh;
+}
+
+footer {
+    padding: 2rem 0 1rem;
+    background-color: #000;
+    color: #fff;
+
+    p {
+        line-height: 2.25rem;
+        text-align: center;
+
+        b {
+            margin: 0 0.5rem;
+        }
+
+        a {
+            margin-right: 0.875rem;
+            transition: .4s text-shadow;
+        }
+
+        a,
+        a:visited,
+        a:hover,
+        a:active {
+            color: #fff;
+        }
+        a:hover,
+        a:active {
+            text-shadow: 1px 1px 1px #fff;
+        }
+    }
+
+    p:first-child {
+        font-size: 1.2rem;
+    }
+
+    p.copyright {
+        font-size: 0.875rem;
+        letter-spacing: 1px;
+        font-weight: 300;
     }
 }

@@ -24,6 +24,7 @@
         background-image: linear-gradient(rgba(white, 0.8), rgba(white, 0.8)), url(/assets/recomm_img2.jpg);
         background-size: cover;
         background-position: -200px 0;
+        position: relative;//要讓 < > 鈕定位
 
         @include center;
         flex-flow: column;
@@ -66,6 +67,7 @@
                 }
             }
         }
+
         .recomm-cards {
             margin-left: 3rem;
 
@@ -73,5 +75,50 @@
                 color: #ea5f36;
             }
         }
+    }
+}
+
+.recomm-carousel-inticator-wrap {
+    width: 12rem;
+    display: flex;
+    justify-content: space-between;
+
+    &::before, &::after {
+        width: 2rem;
+        height: 2rem;
+        background-color: #44444488;
+        border-radius: 3px;
+        @include center;
+        font-size: 1.5rem;
+        font-weight: 600;
+        color: white;
+        cursor: pointer;
+        transition: 0.4s;
+        position: absolute;
+        top: 50%;
+
+        &:hover {
+            background-color: #444444dd;
+        }
+    }
+    &::before {
+        content: '<';
+        left: 25%;
+    }
+    &::after {
+        content: '>';
+        right: 25%;
+    }
+}
+
+.recomm-carousel-inticators {
+    width: 1rem;
+    margin: 1rem 0;
+    border-bottom: 3px solid #555555aa;
+    cursor: pointer;
+    transition: 0.4s;
+
+    &:hover {
+        border-bottom: 3px solid #ffffffaa;
     }
 }

@@ -55,6 +55,7 @@ a:visited {
   background-image: linear-gradient(rgba(255, 255, 255, 0.8), rgba(255, 255, 255, 0.8)), url(/assets/recomm_img2.jpg);
   background-size: cover;
   background-position: -200px 0;
+  position: relative;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -96,6 +97,50 @@ a:visited {
 }
 .recomm > div:last-child .recomm-cards h3 {
   color: #ea5f36;
+}
+
+.recomm-carousel-inticator-wrap {
+  width: 12rem;
+  display: flex;
+  justify-content: space-between;
+}
+.recomm-carousel-inticator-wrap::before, .recomm-carousel-inticator-wrap::after {
+  width: 2rem;
+  height: 2rem;
+  background-color: rgba(68, 68, 68, 0.5333333333);
+  border-radius: 3px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: white;
+  cursor: pointer;
+  transition: 0.4s;
+  position: absolute;
+  top: 50%;
+}
+.recomm-carousel-inticator-wrap::before:hover, .recomm-carousel-inticator-wrap::after:hover {
+  background-color: rgba(68, 68, 68, 0.8666666667);
+}
+.recomm-carousel-inticator-wrap::before {
+  content: "<";
+  left: 25%;
+}
+.recomm-carousel-inticator-wrap::after {
+  content: ">";
+  right: 25%;
+}
+
+.recomm-carousel-inticators {
+  width: 1rem;
+  margin: 1rem 0;
+  border-bottom: 3px solid rgba(85, 85, 85, 0.6666666667);
+  cursor: pointer;
+  transition: 0.4s;
+}
+.recomm-carousel-inticators:hover {
+  border-bottom: 3px solid rgba(255, 255, 255, 0.6666666667);
 }
 
 .section-header {
@@ -169,10 +214,11 @@ a:visited {
   border-radius: 0 0 5px 5px;
 }
 .agd-content .agd-content-box {
-  font-weight: 500;
+  width: 55%;
 }
 .agd-content .agd-content-box figcaption {
   font-size: 1.5rem;
+  font-weight: 500;
   line-height: 3rem;
   color: #26a32f;
 }
@@ -182,15 +228,16 @@ a:visited {
 .agd-content .agd-content-box li {
   font-size: 1.2rem;
   line-height: 2.4rem;
+  font-weight: 700;
 }
 .agd-content .agd-content-img {
-  width: 30%;
   display: flex;
   justify-content: center;
   align-items: center;
+  width: 45%;
 }
 .agd-content .agd-content-img img {
-  width: 70%;
+  width: 90%;
 }
 
 .section-header {

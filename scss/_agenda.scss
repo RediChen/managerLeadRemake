@@ -62,10 +62,11 @@
     border-radius: 0 0 5px 5px;
 
     .agd-content-box {
-        font-weight: 500;
+        width: 55%;
 
         figcaption {
             font-size: 1.5rem;
+            font-weight: 500;
             line-height: 3rem;
             color: $green;
         }
@@ -77,15 +78,17 @@
         li {
             font-size: 1.2rem;
             line-height: 2.4rem;
+            font-weight: 700;
         }
     }
 
     .agd-content-img {
-        width: 30%;
         @include center;
+        width: 45%;
+        // margin-left: 5%;
 
         img {
-            width: 70%;
+            width: 90%;
         }
     }
 }

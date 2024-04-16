@@ -1,0 +1,121 @@
+@import 'mixin';
+
+.annual {
+    background-color: $orange-translucent;
+    backdrop-filter: blur(5px);
+    color: #fff;
+
+    h2 {
+        font-size: 2.25rem;
+        font-weight: 600;
+        margin-bottom: 1rem;
+        text-align: center;
+    }
+
+    p {
+        font-size: 1.375rem;
+        font-weight: 500;
+        text-align: center;
+    }
+}
+
+.annual table {
+    width: 100%;
+    margin-top: 2rem;
+    border: none;
+    border-collapse: collapse;
+
+    #col1 {
+        width: 9rem;
+        // min-width: 7.5rem;
+    }
+
+    th,
+    td {
+        text-align: center;
+        line-height: 3;
+    }
+
+    td {
+        background-color: rgba(0, 0, 0, 0.1);
+    }
+
+    thead th {
+        font-size: 1.5rem;
+
+        &:nth-child(2) {
+            background-color: black;
+        }
+
+        &:nth-child(3) {
+            background-color: $green;
+        }
+
+        &:last-child {
+            background-color: $gray;
+        }
+    }
+
+    tbody tr:not(:last-child) {
+        border-bottom: 1px solid gray;
+        // border-bottom: 1px solid rgba($gray, 0.5);
+    }
+
+    tbody th {
+        font-size: 1.2rem;
+        text-align-last: left;
+    }
+
+    tbody td {
+        font-size: 1.375rem;
+        font-weight: 700;
+    }
+}
+
+.annual-btn-row {
+td:first-child > a {
+    @extend .link-soldout;
+}
+//售完取消游標的連結提示
+
+    td>a {
+        $r: 1.5rem;
+        $gap: 0.6rem;
+        margin: 1rem 1.5rem;
+        padding: $gap;
+        display: block;
+        border-radius: $r;
+
+        background-color: $ivory;
+        color: #000;
+
+        &:hover {
+            background-color: #000;
+        }
+
+        &>div {
+            width: 100%;
+            background-color: $ivory;
+            border-radius: calc($r - #{$gap});
+            font-size: 1.2rem;
+            line-height: 2;
+
+            &:hover {
+                background-color: #000;
+                color: #fff;
+            }
+        }
+    }
+}
+
+.annual .white-arrow {
+    display: inline-block;
+    border: none;
+    width: 1rem;
+    height: 1rem;
+    line-height: 1;
+    font-size: 80%;
+    background-color: rgba(255, 255, 255, 0.5);
+    color: #ea5f36;
+    border-radius: 2px;
+}

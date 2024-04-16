@@ -28,6 +28,24 @@ a, a:visited, a:hover, a:active {
   font-weight: 500;
 }
 
+.container {
+  max-width: 1110px;
+  margin: 0 auto;
+  padding: 3rem 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.date-eng, .lesson-info-box > p {
+  font-family: Oswald, "Noto Sans TC", serif;
+}
+
+.link-soldout, .annual-btn-row td:first-child > a {
+  cursor: default;
+}
+
 .section-header {
   margin: 2rem 0;
   color: #3f4145;
@@ -38,6 +56,24 @@ a, a:visited, a:hover, a:active {
 .section-header h3 {
   font-size: 1.5rem;
   font-weight: 500;
+}
+
+.container {
+  max-width: 1110px;
+  margin: 0 auto;
+  padding: 3rem 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.date-eng, .lesson-info-box > p {
+  font-family: Oswald, "Noto Sans TC", serif;
+}
+
+.link-soldout, .annual-btn-row td:first-child > a {
+  cursor: default;
 }
 
 body {
@@ -121,12 +157,6 @@ header img {
   width: 1110px;
 }
 
-.empty {
-  background-color: rgba(239, 239, 239, 0.5);
-  margin: 3rem 0;
-  height: 30vh;
-}
-
 footer {
   padding: 2rem 0 1rem;
   background-color: #000;
@@ -172,6 +202,24 @@ footer p.copyright {
 .section-header h3 {
   font-size: 1.5rem;
   font-weight: 500;
+}
+
+.container {
+  max-width: 1110px;
+  margin: 0 auto;
+  padding: 3rem 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.date-eng, .lesson-info-box > p {
+  font-family: Oswald, "Noto Sans TC", serif;
+}
+
+.link-soldout, .annual-btn-row td:first-child > a {
+  cursor: default;
 }
 
 .recomm > div:first-child {
@@ -293,6 +341,24 @@ footer p.copyright {
   font-weight: 500;
 }
 
+.container {
+  max-width: 1110px;
+  margin: 0 auto;
+  padding: 3rem 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.date-eng, .lesson-info-box > p {
+  font-family: Oswald, "Noto Sans TC", serif;
+}
+
+.link-soldout, .annual-btn-row td:first-child > a {
+  cursor: default;
+}
+
 .agenda > article {
   margin: 0 auto;
   width: 1110px;
@@ -390,6 +456,24 @@ footer p.copyright {
   font-weight: 500;
 }
 
+.container {
+  max-width: 1110px;
+  margin: 0 auto;
+  padding: 3rem 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.date-eng, .lesson-info-box > p {
+  font-family: Oswald, "Noto Sans TC", serif;
+}
+
+.link-soldout, .annual-btn-row td:first-child > a {
+  cursor: default;
+}
+
 .key-caps {
   padding: 4rem 0;
   background-color: #4f4f51;
@@ -427,6 +511,24 @@ footer p.copyright {
 .section-header h3 {
   font-size: 1.5rem;
   font-weight: 500;
+}
+
+.container {
+  max-width: 1110px;
+  margin: 0 auto;
+  padding: 3rem 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.date-eng, .lesson-info-box > p {
+  font-family: Oswald, "Noto Sans TC", serif;
+}
+
+.link-soldout, .annual-btn-row td:first-child > a {
+  cursor: default;
 }
 
 .about-lesson article:first-child::before {
@@ -470,6 +572,24 @@ footer p.copyright {
   font-weight: 500;
 }
 
+.container {
+  max-width: 1110px;
+  margin: 0 auto;
+  padding: 3rem 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.date-eng, .lesson-info-box > p {
+  font-family: Oswald, "Noto Sans TC", serif;
+}
+
+.link-soldout, .annual-btn-row td:first-child > a {
+  cursor: default;
+}
+
 .lesson-info {
   padding: 1rem;
 }
@@ -485,7 +605,6 @@ footer p.copyright {
 .lesson-info-box > p {
   font-size: 1.5rem;
   font-weight: 500;
-  font-family: Oswald, "Noto Sans TC", serif;
 }
 
 .lesson-price-box {
@@ -550,4 +669,129 @@ footer p.copyright {
 }
 .lesson-btn-box > a:hover, .lesson-btn-box > a:active {
   background-color: #25D0FF;
+}
+
+.section-header {
+  margin: 2rem 0;
+  color: #3f4145;
+}
+.section-header h2 {
+  font-size: 2.25rem;
+}
+.section-header h3 {
+  font-size: 1.5rem;
+  font-weight: 500;
+}
+
+.container {
+  max-width: 1110px;
+  margin: 0 auto;
+  padding: 3rem 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.date-eng, .lesson-info-box > p {
+  font-family: Oswald, "Noto Sans TC", serif;
+}
+
+.link-soldout, .annual-btn-row td:first-child > a {
+  cursor: default;
+}
+
+.annual {
+  background-color: rgba(255, 69, 15, 0.8392156863);
+  -webkit-backdrop-filter: blur(5px);
+          backdrop-filter: blur(5px);
+  color: #fff;
+}
+.annual h2 {
+  font-size: 2.25rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
+  text-align: center;
+}
+.annual p {
+  font-size: 1.375rem;
+  font-weight: 500;
+  text-align: center;
+}
+
+.annual table {
+  width: 100%;
+  margin-top: 2rem;
+  border: none;
+  border-collapse: collapse;
+}
+.annual table #col1 {
+  width: 9rem;
+}
+.annual table th,
+.annual table td {
+  text-align: center;
+  line-height: 3;
+}
+.annual table td {
+  background-color: rgba(0, 0, 0, 0.1);
+}
+.annual table thead th {
+  font-size: 1.5rem;
+}
+.annual table thead th:nth-child(2) {
+  background-color: black;
+}
+.annual table thead th:nth-child(3) {
+  background-color: #26a32f;
+}
+.annual table thead th:last-child {
+  background-color: #7b7b7b;
+}
+.annual table tbody tr:not(:last-child) {
+  border-bottom: 1px solid gray;
+}
+.annual table tbody th {
+  font-size: 1.2rem;
+  -moz-text-align-last: left;
+       text-align-last: left;
+}
+.annual table tbody td {
+  font-size: 1.375rem;
+  font-weight: 700;
+}
+
+.annual-btn-row td > a {
+  margin: 1rem 1.5rem;
+  padding: 0.6rem;
+  display: block;
+  border-radius: 1.5rem;
+  background-color: #efefef;
+  color: #000;
+}
+.annual-btn-row td > a:hover {
+  background-color: #000;
+}
+.annual-btn-row td > a > div {
+  width: 100%;
+  background-color: #efefef;
+  border-radius: calc(1.5rem - 0.6rem);
+  font-size: 1.2rem;
+  line-height: 2;
+}
+.annual-btn-row td > a > div:hover {
+  background-color: #000;
+  color: #fff;
+}
+
+.annual .white-arrow {
+  display: inline-block;
+  border: none;
+  width: 1rem;
+  height: 1rem;
+  line-height: 1;
+  font-size: 80%;
+  background-color: rgba(255, 255, 255, 0.5);
+  color: #ea5f36;
+  border-radius: 2px;
 }

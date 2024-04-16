@@ -3,6 +3,7 @@ $gray: #7b7b7b;
 $black: #232323;
 $green: #26a32f;
 $orange: #ea5f36;
+$orange-translucent: #ff450fd6;
 $gold: #fff109;
 
 @mixin center {
@@ -23,4 +24,21 @@ $gold: #fff109;
         font-size: 1.5rem;
         font-weight: 500;
     }
+}
+
+.container {
+    max-width: 1110px;
+    margin: 0 auto;
+    padding: 3rem 0;
+
+    @include center;
+    flex-direction: column;
+}
+
+.date-eng {
+    font-family: Oswald, 'Noto Sans TC', serif;
+}
+
+.link-soldout {
+    cursor: default;
 }

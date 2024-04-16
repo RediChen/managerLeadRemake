@@ -17,8 +17,8 @@
 
     &>p {
         font-size: 1.5rem;
+        @extend .date-eng;
         font-weight: 500;
-        font-family: Oswald, 'Noto Sans TC', serif;
     }
 }
 
@@ -67,7 +67,7 @@
     margin: 3rem auto 0;
     @include center;
 
-    & > a {
+    &>a {
         display: block;
         padding: 0.8rem 3.5rem;
         background-color: $gold;

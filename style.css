@@ -12,6 +12,10 @@ a:visited {
   text-decoration: none;
 }
 
+a, a:visited, a:hover, a:active {
+  color: white;
+}
+
 .section-header {
   margin: 2rem 0;
   color: #3f4145;
@@ -74,9 +78,6 @@ nav > a > img {
   cursor: pointer;
   font-weight: 500;
 }
-.nav-box li a, .nav-box li a:visited, .nav-box li a:hover, .nav-box li a:active {
-  color: white;
-}
 .nav-box li:nth-last-child(2) > a {
   display: block;
   padding: 0.25rem 1rem;
@@ -90,7 +91,6 @@ nav > a > img {
 }
 .nav-box li:nth-last-child(2) > a:hover, .nav-box li:nth-last-child(2) > a:active {
   background-color: #25D0FF;
-  color: #fff;
 }
 
 .to-the-top {
@@ -489,6 +489,7 @@ footer p.copyright {
 }
 
 .lesson-price-box {
+  margin-top: 1rem;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -499,6 +500,7 @@ footer p.copyright {
 .lesson-price-cards {
   padding: 1rem 0;
   width: 23%;
+  max-width: 255px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -508,6 +510,10 @@ footer p.copyright {
 }
 .lesson-price-cards:first-child {
   background-color: #ea5f36;
+}
+.lesson-price-cards:hover {
+  background-color: #fff109;
+  color: #232323;
 }
 .lesson-price-cards strong {
   font-family: Oswald, "Noto Sans TC", serif;
@@ -544,5 +550,4 @@ footer p.copyright {
 }
 .lesson-btn-box > a:hover, .lesson-btn-box > a:active {
   background-color: #25D0FF;
-  color: #fff;
 }

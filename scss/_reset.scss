@@ -8,3 +8,7 @@ a,
 a:visited {
     text-decoration: none;
 }
+
+a, a:visited, a:hover, a:active {
+    color: white;
+}

@@ -39,10 +39,6 @@ nav {
         list-style: none;
         cursor: pointer;
         font-weight: 500;
-
-        a, a:visited, a:hover, a:active {
-            color: white;
-        }
     }
 
     //立即報名
@@ -62,7 +58,8 @@ nav {
         &:hover,
         &:active {
             background-color: #25D0FF;
-            color: #fff;
+            //原版網站所用顏色
+            // color: #fff;
         }
     }
 }

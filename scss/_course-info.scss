@@ -1,6 +1,4 @@
-@import 'mixin';
-
-.lesson-info {
+.course-info {
 
     &,
     &>.section-header {
@@ -11,7 +9,7 @@
     padding: 1rem;
 }
 
-.lesson-info-box {
+.course-info-box {
     margin: 0 auto;
     width: 1110px;
 
@@ -22,14 +20,14 @@
     }
 }
 
-.lesson-price-box {
+.course-price-box {
     margin-top: 1rem;
     @include center;
     width: 1110px;
     justify-content: space-between;
 }
 
-.lesson-price-cards {
+.course-price-cards {
     padding: 1rem 0;
     width: 23%;
     max-width: 255px;
@@ -54,7 +52,7 @@
     }
 }
 
-.lesson-price-ps {
+.course-price-ps {
     margin: 2rem 0;
     padding: 2rem;
     background-color: $gray;
@@ -63,7 +61,7 @@
     line-height: 2rem;
 }
 
-.lesson-btn-box {
+.course-btn-box {
     margin: 3rem auto 0;
     @include center;
 

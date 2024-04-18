@@ -1,0 +1,30 @@
+.faq {
+    background: linear-gradient(to bottom,#fff, $ivory);
+    color: $black;
+
+    .section-header {
+        color: $black;
+    }
+}
+.questions {
+    margin: 2rem 0;
+    h3 {
+        font-size: 1.5rem;
+        font-weight: 500;
+        line-height: 1.2;
+    }
+    p {
+        font-size: 1rem;
+        font-weight: 400;
+        margin: 1rem 0;
+    }
+
+    &>p>a {
+        &,&:visited {
+            color: $green;
+        }
+        &:hover,&:active {
+            color: $orange;
+        }
+    }
+}

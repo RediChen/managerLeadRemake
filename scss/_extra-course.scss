@@ -31,13 +31,18 @@
             h3 {
                 font-size: 1.5rem;
                 font-weight: 700;
+
+                &::after {
+                    content: ' ↘';
+                    font-size: 0.8rem;
+                }
             }
 
             .lightening-line {
-                height: 3px;
+                height: 1px;
                 background-image: linear-gradient(90deg, $gray 35%, green 45%, green 55%, $gray 65%);
-                background-size: 300% 5px;
-                animation: lightening 3s linear delay iteration-count forwards forwards;
+                background-size: 300% 100%;
+                animation: lightening 1s linear infinite;
 
                 /*
                 參考：
@@ -51,6 +56,7 @@
         }
     }
 }
+
 .extra-course-info {
     margin-top: -1.5rem;
 
@@ -59,16 +65,18 @@
         font-size: 2.125rem;
         font-weight: 700;
     }
+
     h4 {
         margin-bottom: 1rem;
         font-size: 1rem;
         font-weight: 500;
     }
+
     p {
         font-size: 0.9rem;
         font-weight: 300;
     }
-    
+
     .extra-course-btns {
         margin-top: 1rem;
         display: block;
@@ -77,14 +85,32 @@
         text-align: center;
         color: #000;
         font-weight: 500;
-line-height: 2;
+        line-height: 2;
+        animation: color-changing .7s ease infinite alternate;
     }
 }
+
 @keyframes lightening {
     from {
-        background-position-x: 0;
-    }
-    to {
         background-position-x: 100%;
+    }
+
+    to {
+        background-position-x: 0%;
+    }
+}
+
+@keyframes color-changing {
+    0% {
+        background-color: $green;
+    }
+    10% {
+        background-color: $green;
+    }
+    90% {
+        background-color: $gray;
+    }
+    100% {
+        background-color: $gray;
     }
 }

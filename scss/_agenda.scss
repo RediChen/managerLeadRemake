@@ -1,8 +1,3 @@
-.agenda>article {
-    margin: 0 auto;
-    width: 1110px;
-}
-
 .agd-btn-box {
     @include center;
 
@@ -27,10 +22,6 @@
             font-size: 1.2rem;
             font-weight: bold;
             margin-bottom: 1rem;
-        }
-
-        span {
-            font-family: 'Oswald', sans-serif;
         }
     }
 

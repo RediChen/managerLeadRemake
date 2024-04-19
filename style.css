@@ -266,11 +266,6 @@ footer p.copyright {
   border-bottom: 3px solid rgba(255, 255, 255, 0.6666666667);
 }
 
-.agenda > article {
-  margin: 0 auto;
-  width: 1110px;
-}
-
 .agd-btn-box {
   display: flex;
   justify-content: center;
@@ -295,9 +290,6 @@ footer p.copyright {
   font-size: 1.2rem;
   font-weight: bold;
   margin-bottom: 1rem;
-}
-.agd-btn-box a span {
-  font-family: "Oswald", sans-serif;
 }
 .agd-btn-box h2 {
   font-size: 1.75rem;
@@ -390,6 +382,7 @@ footer p.copyright {
 .about-course article:first-child iframe {
   margin: 0 auto;
   display: block;
+  width: 100%;
   aspect-ratio: 16/9;
 }
 .about-course article:last-child {
@@ -407,10 +400,10 @@ footer p.copyright {
 }
 
 .course-info {
+  background-color: #000;
   padding: 1rem;
 }
-.course-info, .course-info > .section-header {
-  background-color: #000;
+.course-info, .course-info header.section-header {
   color: #fff;
 }
 
@@ -428,7 +421,6 @@ footer p.copyright {
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 1110px;
   justify-content: space-between;
 }
 

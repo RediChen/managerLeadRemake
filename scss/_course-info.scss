@@ -1,8 +1,7 @@
 .course-info {
+    background-color: #000;
 
-    &,
-    &>.section-header {
-        background-color: #000;
+    &, header.section-header {
         color: #fff;
     }
 
@@ -23,7 +22,7 @@
 .course-price-box {
     margin-top: 1rem;
     @include center;
-    width: 1110px;
+    // width: 1110px;
     justify-content: space-between;
 }
 

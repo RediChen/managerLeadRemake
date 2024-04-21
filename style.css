@@ -33,6 +33,7 @@ time, mark, audio, video {
 .section-header {
   margin: 2rem 0;
   color: #3f4145;
+  text-align: center;
 }
 .section-header h2 {
   font-size: 2.25rem;
@@ -178,100 +179,46 @@ footer p.copyright {
 
 .recomm > div:first-child {
   background-color: rgba(0, 223, 0, 0.5411764706);
-  padding: 2rem 0;
-}
-.recomm > div:first-child > * {
-  min-width: 930px;
+  padding: 3rem 0;
   text-align: center;
 }
 .recomm > div:first-child h2 {
+  font-weight: 700;
   line-height: 3rem;
 }
 .recomm > div:first-child p {
+  font-size: 1.2rem;
   font-weight: 600;
 }
-.recomm .feedback {
+
+.feedback {
   padding: 3rem 0;
-  background-image: linear-gradient(rgba(255, 255, 255, 0.8), rgba(255, 255, 255, 0.8)), url(/assets/recomm_img2.jpg);
-  background-size: cover;
-  background-position: -200px 0;
-  position: relative;
+  background: linear-gradient(rgba(239, 239, 239, 0.8), rgba(255, 240, 230, 0.8705882353)), url("./assets/recomm_img2.jpg") center/cover;
+}
+.feedback h2 {
+  margin-bottom: 3rem;
+  font-size: 2rem;
+  text-align: center;
+}
+
+.recomm-carousel {
   display: flex;
   justify-content: center;
   align-items: center;
-  flex-flow: column;
+  flex-direction: column;
+  position: relative;
 }
-.recomm .feedback h2 {
-  margin-bottom: 3rem;
-  font-size: 2rem;
-}
-.recomm .feedback .recomm-carousel-cards p {
+.recomm-carousel-cards p {
   font-size: 1.25rem;
   text-align: center;
 }
-.recomm .feedback .recomm-carousel-cards span {
+.recomm-carousel-cards span {
   display: block;
   font-size: 0.8rem;
   line-height: 2rem;
   font-weight: 500;
   text-align: center;
 }
-.recomm > div:last-child {
-  background-color: rgba(0, 0, 0, 0.7294117647);
-  color: #fff;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  padding: 2rem 0;
-}
-.recomm > div:last-child h2 {
-  margin-right: 1rem;
-}
-@media screen and (max-width: 1200px) and (min-width: 768px) {
-  .recomm > div:last-child h2 br {
-    display: none;
-  }
-}
-.recomm > div:last-child .recomm-cards {
-  margin-left: 3rem;
-}
-.recomm > div:last-child .recomm-cards h3 {
-  color: #ea5f36;
-}
-
-.recomm-carousel-inticator-wrap {
-  width: 12rem;
-  display: flex;
-  justify-content: space-between;
-}
-.recomm-carousel-inticator-wrap::before, .recomm-carousel-inticator-wrap::after {
-  width: 2rem;
-  height: 2rem;
-  background-color: rgba(68, 68, 68, 0.5333333333);
-  border-radius: 3px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  font-size: 1.5rem;
-  font-weight: 600;
-  color: white;
-  cursor: pointer;
-  transition: 0.4s;
-  position: absolute;
-  top: 50%;
-}
-.recomm-carousel-inticator-wrap::before:hover, .recomm-carousel-inticator-wrap::after:hover {
-  background-color: rgba(68, 68, 68, 0.8666666667);
-}
-.recomm-carousel-inticator-wrap::before {
-  content: "<";
-  left: 25%;
-}
-.recomm-carousel-inticator-wrap::after {
-  content: ">";
-  right: 25%;
-}
-
 .recomm-carousel-inticators {
   width: 1rem;
   margin: 1rem 0;
@@ -279,8 +226,81 @@ footer p.copyright {
   cursor: pointer;
   transition: 0.4s;
 }
+.recomm-carousel-inticators-wrap {
+  width: 12rem;
+  display: flex;
+  justify-content: space-between;
+}
 .recomm-carousel-inticators:hover {
   border-bottom: 3px solid rgba(255, 255, 255, 0.6666666667);
+}
+.recomm-carousel-arrows {
+  box-sizing: border-box;
+  display: block;
+  width: 30px;
+  height: 30px;
+  padding: 6px;
+  border-radius: 3px;
+  background-color: #232323;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  opacity: 0.5;
+  color: #efefef;
+  position: absolute;
+  top: 50%;
+  transition: opacity 0.2s;
+  cursor: pointer;
+}
+.recomm-carousel-arrows:hover {
+  opacity: 0.9;
+}
+.recomm-carousel-arrows.recomm-carousel-prev {
+  left: 0;
+}
+.recomm-carousel-arrows.recomm-carousel-next {
+  right: 0;
+}
+
+/*
+&::before, &::after {
+    width: 2rem;
+    height: 2rem;
+    background-color: #44444488;
+    border-radius: 3px;
+    @include center;
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: white;
+    cursor: pointer;
+    transition: 0.4s;
+    position: absolute;
+    top: 50%;
+
+}
+*/
+.recomm > div:last-child {
+  padding: 2rem 0;
+  background-color: rgba(0, 0, 0, 0.7294117647);
+  color: #fff;
+  word-break: break-word;
+  overflow-wrap: break-word;
+}
+.recomm > div:last-child .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.recomm > div:last-child h2 {
+  margin-right: 1rem;
+  font-size: 2.25rem;
+}
+.recomm > div:last-child .recomm-cards {
+  margin-left: 3rem;
+}
+.recomm > div:last-child .recomm-cards h3 {
+  color: #ea5f36;
+  font-size: 1.5rem;
 }
 
 .agd-btn-box {

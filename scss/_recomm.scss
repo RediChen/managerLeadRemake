@@ -1,86 +1,103 @@
-.recomm {
-    &>div:first-child {
-        background-color: #00df008a;
-        padding: 2rem 0;
+//*============================= 第 1 區
+.recomm>div:first-child {
+    background-color: #00df008a;
+    padding: 3rem 0;
+    text-align: center;
 
-        &>* {
-            min-width: 930px;
+    h2 {
+        font-weight: 700;
+        line-height: 3rem;
+    }
+
+    p {
+        font-size: 1.2rem;
+        font-weight: 600;
+    }
+}
+
+//======= 第 1 區 END
+//*============================= 第 2 區
+.feedback {
+    padding: 3rem 0;
+    background: linear-gradient(rgba($ivory, 0.8), #fff0e6de), url("./assets/recomm_img2.jpg") center/cover;
+
+    h2 {
+        margin-bottom: 3rem;
+        font-size: 2rem;
+        text-align: center;
+    }
+}
+
+.recomm-carousel {
+    @include center;
+    flex-direction: column;
+    position: relative; //要讓 arrows 鈕定位
+
+    &-cards {
+        $unit: 1.25rem;
+
+        p {
+            font-size: $unit;
             text-align: center;
         }
 
-        h2 {
-            line-height: 3rem;
-        }
-
-        p {
-            font-weight: 600;
-        }
-    }
-
-    .feedback {
-        padding: 3rem 0;
-        background-image: linear-gradient(rgba(white, 0.8), rgba(white, 0.8)), url(/assets/recomm_img2.jpg);
-        background-size: cover;
-        background-position: -200px 0;
-        position: relative;//要讓 < > 鈕定位
-
-        @include center;
-        flex-flow: column;
-
-        h2 {
-            margin-bottom: 3rem;
-            font-size: 2rem;
-        }
-
-        .recomm-carousel-cards {
-            $unit: 1.25rem;
-
-            p {
-                font-size: $unit;
-                text-align: center;
-            }
-
-            span {
-                display: block;
-                font-size: 0.8rem;
-                line-height: 2rem;
-                font-weight: 500;
-                text-align: center;
-            }
+        span {
+            display: block;
+            font-size: 0.8rem;
+            line-height: 2rem;
+            font-weight: 500;
+            text-align: center;
         }
     }
 
-    &>div:last-child {
-        background-color: #000000ba;
-        color: #fff;
-        @include center;
-        padding: 2rem 0;
-
-        h2 {
-            margin-right: 1rem;
-
-            br {
-                @media screen and (max-width: 1200px) and (min-width: 768px) {
-                    display: none;
-                }
-            }
+    &-inticators {
+        &-wrap {
+            width: 12rem;
+            display: flex;
+            justify-content: space-between;
         }
-
-        .recomm-cards {
-            margin-left: 3rem;
-
-            h3 {
-                color: #ea5f36;
-            }
+    
+        width: 1rem;
+        margin: 1rem 0;
+        border-bottom: 3px solid #555555aa;
+        cursor: pointer;
+        transition: 0.4s;
+    
+        &:hover {
+            border-bottom: 3px solid #ffffffaa;
+        }
+    }
+    &-arrows {
+        box-sizing: border-box;
+        display: block;
+        width: 30px;
+        height: 30px;
+        padding: 6px;
+        border-radius: 3px;
+        background-color: $black;
+        @include center;
+        opacity: 0.5;
+        color: $ivory;
+        position: absolute;
+        top: 50%;
+        transition: opacity .2s;
+        cursor: pointer;
+    
+        &:hover {
+            opacity: 0.9;
+        }
+    
+        &.recomm-carousel-prev {
+            left: 0;
+        }
+    
+        &.recomm-carousel-next {
+            right: 0;
         }
     }
 }
 
-.recomm-carousel-inticator-wrap {
-    width: 12rem;
-    display: flex;
-    justify-content: space-between;
-
+    /*
     &::before, &::after {
         width: 2rem;
         height: 2rem;
@@ -95,28 +112,36 @@
         position: absolute;
         top: 50%;
 
-        &:hover {
-            background-color: #444444dd;
+    }
+    */
+//======= 第 2 區 END
+//*============================= 第 3 區
+.recomm>div:last-child {
+    padding: 2rem 0;
+    background-color: #000000ba;
+    color: #fff;
+    word-break: break-word;
+    overflow-wrap: break-word;
+
+    .container {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+
+    h2 {
+        margin-right: 1rem;
+        font-size: 2.25rem;
+    }
+
+    .recomm-cards {
+        margin-left: 3rem;
+
+        h3 {
+            color: #ea5f36;
+            font-size: 1.5rem;
         }
     }
-    &::before {
-        content: '<';
-        left: 25%;
-    }
-    &::after {
-        content: '>';
-        right: 25%;
-    }
 }
-
-.recomm-carousel-inticators {
-    width: 1rem;
-    margin: 1rem 0;
-    border-bottom: 3px solid #555555aa;
-    cursor: pointer;
-    transition: 0.4s;
-
-    &:hover {
-        border-bottom: 3px solid #ffffffaa;
-    }
-}
+//======= 第 3 區 END

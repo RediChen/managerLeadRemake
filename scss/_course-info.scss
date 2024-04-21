@@ -1,11 +1,10 @@
 .course-info {
     background-color: #000;
 
-    &, header.section-header {
+    &,
+    header.section-header {
         color: #fff;
     }
-
-    padding: 1rem;
 }
 
 .course-info-box {
@@ -24,6 +23,13 @@
     @include center;
     // width: 1110px;
     justify-content: space-between;
+
+    a,
+    a:visited,
+    a:hover,
+    a:active {
+        color: $ivory;
+    }
 }
 
 .course-price-cards {

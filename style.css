@@ -30,8 +30,12 @@ time, mark, audio, video {
   padding: 0;
 }
 
+.section-margin {
+  padding: 3rem 0;
+}
+
 .section-header {
-  margin: 2rem 0;
+  margin-bottom: 2rem;
   color: #3f4145;
   text-align: center;
 }
@@ -64,13 +68,13 @@ body {
 
 nav {
   width: 100%;
-  min-height: 70px;
   background-color: #2b2b2b;
   position: fixed;
   top: 0;
   z-index: 9;
 }
 nav .container {
+  min-height: 70px;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -78,39 +82,45 @@ nav .container {
 nav .container > a > img {
   max-width: 300px;
 }
-
-.nav-box, .nav-box li {
+nav ul.nav-box {
+  list-style: none;
+}
+nav ul.nav-box, nav ul.nav-box > li {
   display: flex;
   justify-content: center;
   align-items: center;
 }
-.nav-box a,
-.nav-box a:visited,
-.nav-box a:hover,
-.nav-box a:active {
+nav ul.nav-box a,
+nav ul.nav-box a:visited,
+nav ul.nav-box a:hover,
+nav ul.nav-box a:active {
   color: #efefef;
 }
-.nav-box li > a {
+nav ul.nav-box li {
   padding: 0.2rem 0.8rem;
-  font-size: 1rem;
-  list-style: none;
+}
+nav ul.nav-box li a {
+  vertical-align: middle;
   font-weight: 700;
   cursor: pointer;
 }
-.nav-box li:nth-last-child(2) > a {
+nav ul.nav-box li:nth-last-child(2) > a {
+  padding: 0.2rem 0.8rem;
   display: block;
-  padding: 0.25rem 1rem;
   background-color: #fff109;
   font-weight: 800;
   border-radius: 99rem;
   transition: 0.4s;
 }
-.nav-box li:nth-last-child(2) > a, .nav-box li:nth-last-child(2) > a:visited {
+nav ul.nav-box li:nth-last-child(2) > a, nav ul.nav-box li:nth-last-child(2) > a:visited {
   text-decoration: none;
   color: black;
 }
-.nav-box li:nth-last-child(2) > a:hover, .nav-box li:nth-last-child(2) > a:active {
+nav ul.nav-box li:nth-last-child(2) > a:hover, nav ul.nav-box li:nth-last-child(2) > a:active {
   background-color: #25D0FF;
+}
+nav ul.nav-box li:last-child img {
+  max-height: 35px;
 }
 
 .to-the-top {
@@ -143,7 +153,7 @@ nav .container > a > img {
 }
 
 footer {
-  padding: 2rem 0 1rem;
+  padding: 1rem 0;
   background-color: #000;
   color: #fff;
 }
@@ -262,23 +272,6 @@ footer p.copyright {
   right: 0;
 }
 
-/*
-&::before, &::after {
-    width: 2rem;
-    height: 2rem;
-    background-color: #44444488;
-    border-radius: 3px;
-    @include center;
-    font-size: 1.5rem;
-    font-weight: 600;
-    color: white;
-    cursor: pointer;
-    transition: 0.4s;
-    position: absolute;
-    top: 50%;
-
-}
-*/
 .recomm > div:last-child {
   padding: 2rem 0;
   background-color: rgba(0, 0, 0, 0.7294117647);
@@ -438,9 +431,9 @@ footer p.copyright {
 
 .course-info {
   background-color: #000;
-  padding: 1rem;
 }
-.course-info, .course-info header.section-header {
+.course-info,
+.course-info header.section-header {
   color: #fff;
 }
 
@@ -459,6 +452,12 @@ footer p.copyright {
   justify-content: center;
   align-items: center;
   justify-content: space-between;
+}
+.course-price-box a,
+.course-price-box a:visited,
+.course-price-box a:hover,
+.course-price-box a:active {
+  color: #efefef;
 }
 
 .course-price-cards {
@@ -616,6 +615,9 @@ footer p.copyright {
   background-color: #232323;
   color: #fff;
 }
+.extra-course header {
+  text-align: center;
+}
 .extra-course header h2 {
   font-size: 2.25rem;
 }
@@ -754,10 +756,11 @@ footer p.copyright {
   display: flex;
   justify-content: space-around;
   align-items: center;
+  list-style-type: none;
 }
 .read-more-box li {
-  list-style-type: none;
   width: 30%;
+  padding-bottom: 1rem;
 }
 .read-more-box li a {
   display: block;
@@ -775,7 +778,6 @@ footer p.copyright {
      object-fit: cover;
   border: 1px solid #000;
   transition: opacity 0.5s ease;
-  position: relative;
   opacity: 1;
 }
 .read-more-box figure figcaption {
@@ -785,4 +787,28 @@ footer p.copyright {
 }
 .read-more-box figure:hover img {
   opacity: 0.6;
+}
+
+.read-more-highlight {
+  position: relative;
+}
+.read-more-highlight > a > * {
+  position: relative;
+  z-index: 2;
+}
+.read-more-highlight::before {
+  content: "";
+  display: block;
+  background-color: #ea6058;
+  position: absolute;
+  inset: -10px;
+  border-radius: 10px;
+}
+
+.read-more > .container > a {
+  display: block;
+  margin-top: 6rem;
+}
+.read-more > .container > a > img {
+  width: 100%;
 }

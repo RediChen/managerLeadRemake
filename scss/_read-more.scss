@@ -19,11 +19,12 @@
         display: flex;
         justify-content: space-around;
         align-items: center;
+        list-style-type: none;
     }
 
     li {
-        list-style-type: none;
         width: 30%;
+        padding-bottom: 1rem;
 
         a {
             display: block;
@@ -42,7 +43,7 @@
             object-fit: cover;
             border: 1px solid #000;
             transition: opacity 0.5s ease;
-            position: relative;
+            // position: relative;
             opacity: 1;
         }
 
@@ -60,5 +61,28 @@
     }
 }
 .read-more-highlight {
-    // position: relative;
+    position: relative;
+
+    >a>* {
+        position: relative;
+        z-index: 2;
+    }
+
+    &::before {
+        content: '';
+        display: block;
+        background-color: #ea6058;
+        position: absolute;
+        inset: -10px;
+        border-radius: 10px;
+        // z-index: 1;
+    }
+}
+.read-more>.container>a {
+    display: block;
+    margin-top: 6rem;
+
+    >img {
+        width: 100%;
+    }
 }

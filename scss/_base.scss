@@ -1,40 +1,53 @@
 body {
-    background: url("../assets/lead_bg.svg") center/cover fixed;
+    background: url("../assets/lead_bg.svg") center 0/cover fixed;
     font-family: 'Noto Sans TC', 'Roboto', "微軟正黑體", sans-serif;
     //原網站的字型設定，前兩者皆為 Google Font 資源所有。
     color: $black;
 }
 
 nav {
-    padding: 0 10%;
+    width: 100%;
     min-height: 70px;
+    // height: auto;
     background-color: #2b2b2b;
 
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-
-    position: sticky;
+    position: fixed;
     top: 0;
     z-index: 9;
 
-    &>a>img {
-        max-width: 300px;
+    .container {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        &>a>img {
+            max-width: 300px;
+        }
     }
 }
 
 .nav-box {
-    display: flex;
-
-    li {
+    &, li {
         @include center;
+    }
 
-        margin-left: 1rem;
-        max-height: 2rem;
-        max-width: 6rem;
+    a,
+    a:visited,
+    a:hover,
+    a:active {
+        color: $ivory;
+    }
+
+    li>a {
+        padding: 0.2rem 0.8rem;
+
+        // margin-left: 1rem;
+        // max-height: 2rem;
+        // max-width: 6rem;
+        font-size: 1rem;
         list-style: none;
+        font-weight: 700;
         cursor: pointer;
-        font-weight: 500;
     }
 
     //立即報名
@@ -44,6 +57,7 @@ nav {
         background-color: $gold;
         font-weight: 800; //彌補視覺差
         border-radius: 99rem;
+        transition: .4s;
 
         &,
         &:visited {
@@ -65,25 +79,23 @@ nav {
     height: 55px;
     border-radius: 50%;
     background-color: $green;
+    opacity: 0.9;
+    color: white;
 
-    position: sticky;
-    // position: absolute;
-    top: 90vh;
-    left: calc(100vw - 65px);
+    position: fixed;
+    bottom: 1%;
+    right: 1%;
     cursor: pointer;
 
-    .arrow {
-        margin: 0 auto;
-        $unit: 15px;
-        width: 2*$unit;
-        height: 2*$unit;
-        border-style: solid;
-        border-width: $unit;
-        border-color: transparent transparent #fff transparent;
+    @include center;
+
+    &:hover {
+        opacity: 1;
     }
 }
 
-.top-header {
+.main-header {
+    padding: 9rem 0 6rem;
     display: flex;
     align-items: center;
     flex-flow: column;
@@ -117,6 +129,7 @@ footer {
         a:active {
             color: #fff;
         }
+
         a:hover,
         a:active {
             text-shadow: 1px 1px 1px #fff;

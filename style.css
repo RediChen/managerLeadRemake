@@ -2,14 +2,32 @@
 @import url("https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@100..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap");
 body {
-  margin: 0;
-  padding: 0;
   box-sizing: border-box;
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.5;
 }
 
 a,
 a:visited {
   text-decoration: none;
+}
+
+html, body, div, span, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
 }
 
 .section-header {
@@ -27,7 +45,6 @@ a:visited {
 .container {
   max-width: 1110px;
   margin: 0 auto;
-  padding: 3rem 0;
 }
 
 .date-eng, .course-info-box > p {
@@ -39,39 +56,45 @@ a:visited {
 }
 
 body {
-  background: url("../assets/lead_bg.svg") center/cover fixed;
+  background: url("../assets/lead_bg.svg") center 0/cover fixed;
   font-family: "Noto Sans TC", "Roboto", "微軟正黑體", sans-serif;
   color: #232323;
 }
 
 nav {
-  padding: 0 10%;
+  width: 100%;
   min-height: 70px;
   background-color: #2b2b2b;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  position: sticky;
+  position: fixed;
   top: 0;
   z-index: 9;
 }
-nav > a > img {
+nav .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+nav .container > a > img {
   max-width: 300px;
 }
 
-.nav-box {
-  display: flex;
-}
-.nav-box li {
+.nav-box, .nav-box li {
   display: flex;
   justify-content: center;
   align-items: center;
-  margin-left: 1rem;
-  max-height: 2rem;
-  max-width: 6rem;
+}
+.nav-box a,
+.nav-box a:visited,
+.nav-box a:hover,
+.nav-box a:active {
+  color: #efefef;
+}
+.nav-box li > a {
+  padding: 0.2rem 0.8rem;
+  font-size: 1rem;
   list-style: none;
+  font-weight: 700;
   cursor: pointer;
-  font-weight: 500;
 }
 .nav-box li:nth-last-child(2) > a {
   display: block;
@@ -79,6 +102,7 @@ nav > a > img {
   background-color: #fff109;
   font-weight: 800;
   border-radius: 99rem;
+  transition: 0.4s;
 }
 .nav-box li:nth-last-child(2) > a, .nav-box li:nth-last-child(2) > a:visited {
   text-decoration: none;
@@ -93,26 +117,27 @@ nav > a > img {
   height: 55px;
   border-radius: 50%;
   background-color: #26a32f;
-  position: sticky;
-  top: 90vh;
-  left: calc(100vw - 65px);
+  opacity: 0.9;
+  color: white;
+  position: fixed;
+  bottom: 1%;
+  right: 1%;
   cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
-.to-the-top .arrow {
-  margin: 0 auto;
-  width: 30px;
-  height: 30px;
-  border-style: solid;
-  border-width: 15px;
-  border-color: transparent transparent #fff transparent;
+.to-the-top:hover {
+  opacity: 1;
 }
 
-.top-header {
+.main-header {
+  padding: 9rem 0 6rem;
   display: flex;
   align-items: center;
   flex-flow: column;
 }
-.top-header img {
+.main-header img {
   width: 100%;
 }
 

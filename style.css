@@ -61,7 +61,7 @@ time, mark, audio, video {
 }
 
 body {
-  background: url("../assets/lead_bg.svg") center 0/cover fixed;
+  background: url("./assets/lead_bg.svg") center 0/cover fixed;
   font-family: "Noto Sans TC", "Roboto", "微軟正黑體", sans-serif;
   color: #232323;
 }
